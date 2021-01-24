@@ -64,7 +64,7 @@ public class Main extends Application {
         scene.setCamera(camera);
 
         PhongMaterial mat = new PhongMaterial();
-        String imageName = "resources/pallete.png";
+        String imageName = "resources/palette.png";
         mat.setDiffuseMap(new Image(getClass().getResourceAsStream(imageName)));
 
         Group meshGroup = new Group();
