@@ -79,7 +79,7 @@ public class Main extends Application {
             meshGroup.getChildren().add(meshP);
         });
 
-        Rotate rotateX = new Rotate(30, 0, 0, 0, Rotate.X_AXIS);
+        Rotate rotateX = new Rotate(20, 0, 0, 0, Rotate.X_AXIS);
         Rotate rotateY = new Rotate(20, 0, 0, 0, Rotate.Y_AXIS);
         meshGroup.getTransforms().addAll(rotateX, rotateY);
 
@@ -92,8 +92,8 @@ public class Main extends Application {
         scene.setOnMouseDragged(me -> {
             mousePosX = me.getSceneX();
             mousePosY = me.getSceneY();
-            rotateX.setAngle(rotateX.getAngle() - (mousePosY - mouseOldY));
-            rotateY.setAngle(rotateY.getAngle() + (mousePosX - mouseOldX));
+            rotateX.setAngle(rotateX.getAngle() + (mousePosY - mouseOldY));
+            rotateY.setAngle(rotateY.getAngle() - (mousePosX - mouseOldX));
             mouseOldX = mousePosX;
             mouseOldY = mousePosY;
         });
